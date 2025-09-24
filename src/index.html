@@ -1,13 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+
+  <!-- Font Awesome (scalable vector icons via CSS) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Your SCSS entry (as requested) -->
+  <link rel="stylesheet" href="./css/main.scss" />
+</head>
+<body>
+  <!-- Header (fixed & sticky) -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="brand reveal" data-delay="0ms">Sachi Singh Portfolio</a>
+      <nav class="nav">
+        <a href="#home"     class="reveal" data-delay="40ms">Home</a>
+        <a href="#interest"  class="reveal" data-delay="80ms">Interests</a>
+        <a href="#skills" class="reveal" data-delay="120ms">Skills</a>
+        <a href="#profile"class="reveal" data-delay="160ms">Profile</a>
+        <a href="#academics"     class="reveal" data-delay="200ms">Academics</a>
+        <a href="#projects"     class="reveal" data-delay="240ms"> Projects</a>
+        <a href="#expertise"    class="reveal" data-delay="280ms">Expertise</a>
+        <a href="#contact"  class="reveal" data-delay="320ms">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="stripe stripe--accent">
+      <div class="container">
+        <h1 class="reveal" data-delay="0ms">Hello, I am Sachi Singh</h1>
+        <p class="lead reveal" data-delay="120ms"> Results-driven professional with 3+ years of experience in the field of analytics, blending technology expertise with business acumen. Aspiring to tackle business challenges at the intersection of technology and human connections. Master's student at University of Illinois Urbana - Champaign </p>
+      </div>
+    </section>
+
+    <!-- Carousel -->
+    <section id="interest" class="carousel-section" aria-label="Image carousel">
+      <div class="carousel">
+        <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Previous">❮</button>
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <figure class="carousel__slide">
+              <img src="https://www.candorblog.com/wp-content/uploads/2017/05/travel-022.jpg" alt="Slide 1" />
+              <figcaption class="reveal" data-delay="0ms">Travelling is my passion</figcaption>
+            </figure>
+            <figure class="carousel__slide">
+              <img src="https://www.bu.edu/cfa/files/2022/06/bu-dance-tsai-performance-center-1920x1080.jpeg" alt="Slide 2" />
+              <figcaption class="reveal" data-delay="0ms">Dance is my stressbuster</figcaption>
+            </figure>
+            <figure class="carousel__slide">
+              <img src="https://iso.500px.com/wp-content/uploads/2016/03/pedroquintela-1500x844.jpg" alt="Slide 3" />
+              <figcaption class="reveal" data-delay="0ms">Photography is an Art</figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Next">❯</button>
+      </div>
+    </section>
+
+    <!-- Multi-column Features (now using Font Awesome icons) -->
+    <section id="skills" class="stripe">
+      <div class="container features">
+        <article class="feature reveal" data-delay="0ms">
+          <span class="feature__icon" aria-hidden="true">
+            <i class="fa-solid fa-cloud"></i>
+          </span>
+          <h3>Python</h3>
+          <p>Pro at Python Programming</p>
+        </article>
+
+        <article class="feature reveal" data-delay="100ms">
+          <span class="feature__icon" aria-hidden="true">
+            <i class="fa-regular fa-bars"></i>
+          </span>
+          <h3>SQL</h3>
+          <p>Postsql, Sqllite, Mysql</p>
+        </article>
+
+        <article class="feature reveal" data-delay="200ms">
+          <span class="feature__icon" aria-hidden="true">
+            <i class="fa-solid fa-shield-halved"></i>
+          </span>
+          <h3>Power BI</h3>
+          <p>Visualized 100+ reports</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Fixed-background Portfolio -->
+    <section id="profile" class="stripe stripe--bg-fixed">
+      <div class="container">
+        <h2 class="reveal" data-delay="0ms">Ex Data Analyst At Capgemini</h2>
+        <p class="reveal" data-delay="120ms">Three years of work experience as Data Analyst</p>
+      </div>
+    </section>
+
+    <!-- Work grid that opens modals -->
+    <section id="academics" class="stripe">
+      <div class="container">
+        <h2 class="reveal" data-delay="0ms">Academics</h2>
+        <div class="work-grid">
+          <button class="work-card reveal" data-delay="0ms"   data-modal="modal-1" aria-haspopup="dialog">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEmVwLdx87w00DepdA0uLqlQULXMcyZXCECw&s" alt="UIUC thumbnail" />
+            <span class="work-card__label">Masters At UIUC</span>
+          </button>
+          <button class="work-card reveal" data-delay="60ms"  data-modal="modal-2" aria-haspopup="dialog">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRicMzwXzD-gmjTwVRUNEk6hLdp6mcpMHe3PA&s" alt="MUMBAI thumbnail" />
+            <span class="work-card__label">Bachelors At Mumbai University</span>
+          </button>
+    
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (video background) -->
+    <section id="projects" class="stripe video-hero" aria-label="Background video">
+      <div class="video-hero__media" aria-hidden="true">
+        <video
+          class="video-hero__video"
+          src="https://media.istockphoto.com/id/687157064/video/computer-screen-with-hacking-warning-message-cybercrime-concept-computer-system-under-attack.mp4?s=mp4-640x640-is&k=20&c=RtSZTnakRO61mb6wUh05ELhgzfKNfIVhbmfDnmh0k08="
+        
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+        <span class="video-hero__scrim"></span>
+      </div>
+      <div class="video-hero__content container reveal" data-delay="0ms">
+        <h2>Projects</h2>
+        <p class="lead">Interested in Data Science Projects</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="expertise" class="stripe stripe--accent vcenter">
+      <div class="container">
+        <h2 class="reveal" data-delay="0ms">Expertise</h2>
+        <p class="reveal" data-delay="120ms">Expertise in analyzing complex datasets using Python, R, and SQL to extract actionable insights and optimize business processes. Skilled in creating impactful data visualizations using Tableau and PowerBI to support data-driven decision-making across industries such as healthcare, finance, and technology.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="stripe">
+      <div class="container">
+        <h2 class="reveal" data-delay="0ms">Contact Me Here</h2>
+        <p class="reveal" data-delay="120ms">Email : @gmail.com  ---- Phone No: 0987654321.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-cols">
+      <div> Sachi Singh </div>
+
+      <!-- NEW: Social icons (Font Awesome) -->
+      <div class="social">
+       
+        <a href="https://www.linkedin.com/in/sac01/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="modal-1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" hidden>
+    <div class="modal__dialog">
+      <button class="modal__close" aria-label="Close">×</button>
+      <h3 id="modal-1-title">UIUC</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEmVwLdx87w00DepdA0uLqlQULXMcyZXCECw&s" alt="" />
+      <p>This is a picture of my Master's University</p>
+    </div>
+  </div>
+
+  <div id="modal-2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-2-title" hidden>
+    <div class="modal__dialog">
+      <button class="modal__close" aria-label="Close">×</button>
+      <h3 id="modal-2-title">MUMBAI UNIVERSITY</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRicMzwXzD-gmjTwVRUNEk6hLdp6mcpMHe3PA&s" alt="" />
+      <p>This is my Undergraduate University</p>
+    </div>
+  </div>
+
+  <script src="./js/main.js" defer></script>
+</body>
 </html>
