@@ -23,7 +23,7 @@ function smoothScrollTo(target)
   const el = document.querySelector(target);
   if (!el) return;
   const targetTop = el.getBoundingClientRect().top + window.scrollY;
-  const top = Math.max(0, targetTop - headerH - 8);
+  const top = Math.max(0, targetTop - headerH);
   window.scrollTo({ top, behavior: 'smooth' });
 }
 navLinks.forEach(a => 
